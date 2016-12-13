@@ -133,7 +133,8 @@ class Breadcrumbs extends React.Component {
           to: route.path,
         }, name);
       } else {
-        link = name;
+        // link = name;
+        link = React.createElement("span", null, name);
         itemClass += ' ' + this.props.activeItemClass;
       }
       return !createElement ? link:
